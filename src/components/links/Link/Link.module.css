@@ -1,0 +1,9 @@
+.link {
+  padding: var(--md) var(--lg);
+  text-decoration: none;
+}
+
+.isActive {
+  border-radius: var(--md);
+  outline: var(--border);
+}
