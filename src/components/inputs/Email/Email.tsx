@@ -1,5 +1,5 @@
-import { cls } from "@utils/cls";
 import css from "./Email.module.css";
+import { cls } from "@utils/cls";
 import { InputHTMLAttributes } from "react";
 
 export default function Email(props: Props) {
