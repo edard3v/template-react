@@ -1,13 +1,16 @@
+import css from "./Home.module.css";
 import Layout from "@layouts/Layout/Layout";
 import { HOME } from "./config";
 import Btn from "@components/buttons/Btn/Btn";
+import Email from "@components/inputs/Email/Email";
 
 export default function Home() {
   return (
     <Layout title={HOME.display}>
-      <main>
+      <main className={css.home}>
         <h1>¡Hola mundo!</h1>
         <Btn>Enviar</Btn>
+        <Email />
       </main>
     </Layout>
   );
