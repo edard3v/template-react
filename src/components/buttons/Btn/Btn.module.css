@@ -18,6 +18,10 @@
     opacity: 0.5;
   }
 
+  &:not(:disabled):active {
+    transform: scale(0.95);
+  }
+
   .loading {
     width: 25px;
     aspect-ratio: 4;

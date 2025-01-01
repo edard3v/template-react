@@ -7,7 +7,11 @@ export default function Btn(props: Props) {
   const { className, children, loading, err, disabled, ...rest } = props;
 
   return (
-    <button {...rest} className={cls([css.btn, className])} disabled={disabled}>
+    <button
+      {...rest}
+      className={cls([css.btn, className])}
+      disabled={disabled || loading}
+    >
       {!loading && children}
 
       {loading && <div className={css.loading}></div>}
