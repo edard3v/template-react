@@ -2,7 +2,7 @@ input {
   padding: 0 var(--md);
   background-color: var(--bg-surf);
   border: var(--border);
-  min-height: var(--h-input);
+  min-height: var(--h_input);
   border-radius: var(--md);
   color: inherit;
   width: 100%;
