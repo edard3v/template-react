@@ -11,13 +11,10 @@ export default function Password(props: Props) {
         {...rest}
         type={!isVisiblePass ? "password" : "text"}
         placeholder="Contraseña"
-        className={cls([err && css.inputErr])}
+        className={cls([err && css.input_err])}
         title={err}
       />
-      <span
-        className={css.emoji}
-        onClick={() => setIsVisiblePass(!isVisiblePass)}
-      >
+      <span className={css.emoji} onClick={() => setIsVisiblePass(!isVisiblePass)}>
         {!isVisiblePass ? "😵" : "🧐"}
       </span>
     </label>

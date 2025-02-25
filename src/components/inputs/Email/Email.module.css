@@ -2,6 +2,6 @@
   position: relative;
 
   .inputErr {
-    outline: var(--err-outline);
+    outline: var(--err_outline);
   }
 }
