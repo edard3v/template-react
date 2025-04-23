@@ -7,7 +7,7 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
   const [errors, setErrors] = useState<T>();
   const [isValid, setIsValid] = useState(false);
 
-  const subscribe = () => {
+  const success = () => {
     const result = validate();
     if (!result || !result.inputs) return;
 
@@ -35,17 +35,21 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
     return { inputs: data };
   };
 
+  const reset = () => formRef?.current?.reset();
+
   return {
     ref: formRef,
     inputs,
     errors,
     isValid,
-    subscribe,
+    validate,
+    success,
+    reset,
   };
 };
 
 type Inputs = { [x: string]: string } | undefined;
 
 type Options<T> = {
-  success: (inputs: { inputs: T }) => void;
+  success: (data: { inputs: T }) => void;
 };
