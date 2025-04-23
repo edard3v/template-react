@@ -8,7 +8,11 @@ import { useForm } from "@hooks/useForm/useForm";
 import Btn from "@components/buttons/Btn/Btn";
 
 export default function Home() {
-  const schema = z.object({ email: z.string().email(), password: z.string().min(6) });
+  const schema = z.object({
+    email: z.string().email(),
+    password: z.string().min(6),
+  });
+
   type Schema = z.infer<typeof schema>;
 
   const form = useForm<Schema>(schema, {
@@ -16,8 +20,6 @@ export default function Home() {
       console.log(data);
     },
   });
-
-  console.log(form.errors);
 
   return (
     <Layout title={HOME.display}>

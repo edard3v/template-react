@@ -20,27 +20,33 @@ useForm<T>();
 
 ```ts
 export default function Component() {
+  const schema = z.object({
+    email: z.string().email(),
+    password: z.string().min(6),
+  });
+
+  type Schema = z.infer<typeof schema>;
+
   const form = useForm<Schema>(schema, {
+    // Se ejecuta cuando el form es valido
     success({ inputs }) {
       console.log(inputs);
     },
   });
 
   return (
-    <div className={css.search}>
-      <form
-        ref={form.ref}
-        onChange={form.update}
-        onSubmit={(e) => {
-          e.preventDefault();
-          form.success();
-        }}
-      >
-        <Email name="email" />
-        <Password name="password" />
-        <Btn>Login</Btn>
-      </form>
-    </div>
+    <form
+      ref={form.ref}
+      onChange={form.update}
+      onSubmit={(e) => {
+        e.preventDefault();
+        form.success();
+      }}
+    >
+      <Email name="email" />
+      <Password name="password" />
+      <Btn>Login</Btn>
+    </form>
   );
 }
 ```

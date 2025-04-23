@@ -6,6 +6,7 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
   const [inputs, setInputs] = useState<T>();
   const [errors, setErrors] = useState<T>();
   const [isValid, setIsValid] = useState(false);
+  const [hasFirstSubmit, setHasFirstSubmit] = useState(false);
 
   const success = () => {
     const result = validate();
@@ -15,6 +16,7 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
   };
 
   const validate = (): { inputs: T } => {
+    setHasFirstSubmit(true);
     const formData = new FormData(formRef.current!);
     const formEntries = Object.fromEntries(formData);
     const { error, data, success } = schema.safeParse(formEntries);
@@ -37,13 +39,18 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
 
   const reset = () => formRef?.current?.reset();
 
+  const update = () => {
+    if (!hasFirstSubmit) return;
+    validate();
+  };
+
   return {
     ref: formRef,
     inputs,
     errors,
     isValid,
 
-    update: validate,
+    update,
     success,
     reset,
   };
