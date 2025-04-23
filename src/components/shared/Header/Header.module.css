@@ -1,6 +1,6 @@
 .header {
   padding: var(--lg);
-  border-bottom: var(--border);
+  border-bottom: var(--br);
 
   nav {
     display: flex;

@@ -1,29 +1,32 @@
-:root {
-  @media (min-width: 320px) and (max-width: 767px) {
-    font-size: 14px;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -1.5px;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.75rem;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
 }
 
 h4 {
-  font-size: 2em;
+  font-size: 1.875rem;
 }
 
 h5 {
-  font-size: 1.75em;
+  font-size: 1.5rem;
 }
 
 h6 {
-  font-size: 1.5em;
+  font-size: 1.25rem;
 }

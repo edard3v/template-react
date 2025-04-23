@@ -9,5 +9,5 @@
 }
 
 .isActive {
-  outline: var(--border);
+  outline: var(--br);
 }

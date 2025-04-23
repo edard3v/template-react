@@ -1,3 +1,4 @@
 :root {
-  --border: 1px solid var(--line);
+  --br: 1px solid var(--lblack);
+  --brr: 1px solid var(--red);
 }

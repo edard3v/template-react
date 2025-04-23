@@ -1,4 +1,5 @@
 :root {
   --outline: 2px solid var(--primary);
-  --err_outline: 2px solid var(--red);
+  --outline_secondary: 2px solid var(--secondary);
+  --outline_err: 2px solid var(--red);
 }

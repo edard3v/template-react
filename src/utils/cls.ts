@@ -1,8 +1,8 @@
 type Class = string | undefined | null | false;
 type ClassNames = Class[];
 
-export const cls = (classNames: ClassNames) => {
-  const validClasses = classNames.filter(Boolean);
-  const finalClass = validClasses.join(" ");
-  return finalClass;
+export const cls = (class_names: ClassNames) => {
+  const valid_classes = class_names.filter(Boolean);
+  const final_class = valid_classes.join(" ");
+  return final_class;
 };
