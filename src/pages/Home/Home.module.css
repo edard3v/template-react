@@ -3,4 +3,9 @@
   gap: var(--lg);
   place-content: start;
   place-items: start;
+
+  form {
+    display: grid;
+    gap: var(--lg);
+  }
 }
