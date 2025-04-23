@@ -14,7 +14,7 @@ useForm<T>();
 
 - Debes vincular la referencia `ref` retornada por `useForm` al elemento `<form>`.
 - Cada input debe tener un atributo `name` único. **No se admite el uso de inputs con nombres duplicados**.
-- Puedes actualizar el estado interno del formulario utilizando la función `update`.
+- Puedes actualizar el estado del formulario utilizando la función `update`, dicha fn actua luego del primer intento de submit.
 
 ### Ejemplo
 
