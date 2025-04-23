@@ -42,7 +42,8 @@ export const useForm = <T = Inputs>(schema: ZodSchema, options: Options<T>) => {
     inputs,
     errors,
     isValid,
-    validate,
+
+    update: validate,
     success,
     reset,
   };
