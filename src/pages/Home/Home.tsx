@@ -16,10 +16,13 @@ export default function Home() {
   type Schema = z.infer<typeof schema>;
 
   const form = useForm<Schema>(schema, {
-    success(data) {
-      console.log(data);
+    success(inputs) {
+      console.log(inputs);
     },
   });
+
+  console.log("erros", form.errors);
+  console.log("inputs", form.inputs);
 
   return (
     <Layout title={HOME.display}>
